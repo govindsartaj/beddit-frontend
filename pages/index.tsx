@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { useGetBoards } from "../api-hooks/boards/getBoards";
+import { useGetAllBoards } from "../api-hooks/boards";
 import BoardsList from "../components/BoardsList";
 
 const Home: NextPage = () => {
-  const { isLoading, error, boards, execute } = useGetBoards();
+  const { isLoading, error, boards, execute } = useGetAllBoards();
 
   useEffect(() => {
     execute();
