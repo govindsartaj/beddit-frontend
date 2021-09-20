@@ -1,8 +1,8 @@
 function Post({ post }: any) {
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+      <div className="text-4xl">{post.title}</div>
+      <div className="text-xl">{post.body}</div>
     </div>
   );
 }
