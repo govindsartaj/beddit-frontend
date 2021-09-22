@@ -15,33 +15,6 @@ const BoardsList = ({ boards }: any) => {
       {boards.map((board: any, i: number) => (
         <BoardListItem key={board._id} id={board._id} board={board} />
       ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
-      {boards.map((board: any, i: number) => (
-        <BoardListItem key={board._id} id={board._id} board={board} />
-      ))}
     </div>
   );
 };
