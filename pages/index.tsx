@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { useGetAllBoards } from "../api-hooks/boards";
-import BoardsList from "../components/BoardsList";
+import BoardList from "../components/BoardList";
 
 const Home: NextPage = () => {
   const { isLoading, error, boards, execute } = useGetAllBoards();
@@ -10,11 +10,11 @@ const Home: NextPage = () => {
     execute();
   }, [execute]);
 
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading) return null;
 
   if (error) return <div>something went wrong...</div>;
 
-  return <div>{boards && <BoardsList boards={boards} />}</div>;
+  return <div className="w-full">{boards && <BoardList boards={boards} />}</div>;
 };
 
 export default Home;

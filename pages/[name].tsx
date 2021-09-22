@@ -1,15 +1,11 @@
 import Link from "next/link";
 
 function Board({ board }: any) {
-  return (
-    <div>
-      {board.posts.map((post: any) => (
-        <Link href={`/${post.board}/${post._id}`} key={post._id}>
-          {post.title}
-        </Link>
-      ))}
-    </div>
-  );
+  return board.posts.map((post: any) => (
+    <Link href={`/${post.board}/${post._id}`} key={post._id}>
+      {post.title}
+    </Link>
+  ));
 }
 
 export async function getStaticPaths() {

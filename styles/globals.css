@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+.min-h-screen-minus-nav {
+  min-height: calc(100vh - 3.5rem);
+}
+
 * {
   box-sizing: border-box;
 }
