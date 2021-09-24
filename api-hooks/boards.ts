@@ -47,14 +47,11 @@ export const useGetBoard = () => {
       options
     );
     const data = await response.json();
-    console.log(data);
-    
+
     return data;
   };
 
   const execute = async (id: string, options = {}) => {
-    console.log(id);
-    
     try {
       setIsLoading(true);
       const board = await getBoard(id, options);

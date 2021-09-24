@@ -16,7 +16,7 @@ const NewBoard: NextPage = () => {
       <div className="text-center">
         <PageTitle text={"Sign up"} />
       </div>
-      <BedditPanel className="max-w-56">
+      <BedditPanel className="max-w-56 ">
         <FormField label="Username*" value={username} setValue={setUsername} />
         <FormField label="Email address*" value={email} setValue={setEmail} />
         <FormField
@@ -31,6 +31,9 @@ const NewBoard: NextPage = () => {
             to="#"
             onClick={() => console.log(username, email, password)}
           />
+        </div>
+        <div>
+          Already have an account? <Link href="/login" passHref><span className="underline cursor-pointer">Log in!</span></Link>
         </div>
       </BedditPanel>
     </div>
