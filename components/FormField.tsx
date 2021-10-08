@@ -5,6 +5,7 @@ const FormField = ({
   url = false,
   password = false,
   setValue,
+  onEnter,
 }: any) => {
   return (
     <div className="py-2">
@@ -12,10 +13,10 @@ const FormField = ({
         {label}
         {url ? (
           <div className="flex">
-            <div className="font-mono hidden sm:block p-1">{url}</div>
+            <div className="hidden p-1 font-mono sm:block">{url}</div>
             <input
               placeholder="unique-id"
-              className="w-full font-mono border p-1"
+              className="w-full p-1 font-mono border"
               value={value}
               onChange={(e) => setValue(e.target.value)}
             ></input>
@@ -23,10 +24,11 @@ const FormField = ({
         ) : (
           <input
             placeholder={placeholder}
-            className="w-full border p-1"
+            className="w-full p-1 border"
             type={password ? "password" : undefined}
             value={value}
             onChange={(e) => setValue(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && onEnter()}
           ></input>
         )}
       </label>

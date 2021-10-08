@@ -14,7 +14,8 @@ function Board({ board }: any) {
 
 export async function getServerSideProps({ params }: any) {
   const response = await fetch(
-    `https://5jcp59816b.execute-api.us-east-1.amazonaws.com/dev/api/boards/${params.name}`
+    `https://5jcp59816b.execute-api.us-east-1.amazonaws.com/dev/api/boards/${params.name}`,
+    {credentials: 'include'}
   );
   const board = await response.json();
 

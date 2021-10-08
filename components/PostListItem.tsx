@@ -7,7 +7,7 @@ const PostListItem = ({ id, post, board }: any) => {
 
   const handleClick = ({ target }: any) => {
     if (target.className.includes("profile-link")) {
-      router.push("/users/govindsartaj");
+      router.push(`/users/${post.author}`);
     } else {
       router.push(`/${board}/${id}`);
     }
@@ -19,7 +19,7 @@ const PostListItem = ({ id, post, board }: any) => {
         <div className="flex items-baseline">
           <div className="font-light text-2xl mr-2 truncate">{post.title}</div>
           <div className="font-light text-sm cursor-pointer hover:underline profile-link">
-            ({`govindsartaj`})
+            {post.author}
           </div>
         </div>
         <div className="font-light text-normal truncate">{post.body}</div>

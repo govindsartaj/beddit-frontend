@@ -8,7 +8,7 @@ export const useGetAllBoards = () => {
   const getAllBoards = async (options: any) => {
     const response = await fetch(
       "https://5jcp59816b.execute-api.us-east-1.amazonaws.com/dev/api/boards",
-      options
+      { ...options, credentials: "include" }
     );
     const data = await response.json();
     return data;
@@ -44,7 +44,7 @@ export const useGetBoard = () => {
   const getBoard = async (id: string, options: any) => {
     const response = await fetch(
       `https://5jcp59816b.execute-api.us-east-1.amazonaws.com/dev/api/boards/${id}`,
-      options
+      { ...options, credentials: "include" }
     );
     const data = await response.json();
 
